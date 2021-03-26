@@ -92,24 +92,25 @@
 	
 	}
 
-	$("#registration_form").submit(function() {
+	$("#registration_form").submit(myfunction())
+	{
 											
-		error_username = fals;
-		error_password = fals;
-		error_retype_password = fals;
-		error_email = fals;
+		error_username = false;
+		error_password = false;
+		error_retype_password = false;
+		error_email = false;
 											
 		check_username();
 		check_password();
 		check_retype_password();
 		check_email();
 		
-		if(error_username == fals && error_password == fals && error_retype_password == fals && error_email == fals) {
+		if(error_username == false && error_password == false && error_retype_password == false && error_email == false) {
 			return true;
 		} else {
-			return fals;	
+			return false;	
 		}
 
-	});
+	};
 
 });

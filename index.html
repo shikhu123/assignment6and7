@@ -16,27 +16,32 @@
             <table>
                <tr>
                   <td>Chose Username: </td>
-                  <td><input type="text" class="form_text" id="form_username"></td>
+                  <td><input type="text" class="form_text" id="form_username" placeholder=" Shikha Sharma" required ></td>
                   <td><span class="error_form" id="username_error_message"></span></td>
                </tr>
                <tr>
                   <td>Password: </td>
-                  <td><input type="password" class="form_text" id="form_password"></td>
+                  <td><input type="password" class="form_text" id="form_password" required ></td>
                   <td><span class="error_form" id="password_error_message"></span></td>
                </tr>
                <tr>
                   <td>Retype Password: </td>
-                  <td><input type="password" class="form_text" id="form_retype_password"></td>
+                  <td><input type="password" class="form_text" id="form_retype_password"  required ></td>
                   <td><span class="error_form" id="retype_password_error_message"></span></td>
                </tr>
                <tr>
+                <td>Contact: </td>
+                <td><input type="tel" class="form_number" id="form_number" placeholder = "123-667-889" required ></td>
+                <td><span class="error_form" id="number_error_message"></span></td>
+             </tr>
+               <tr>
                   <td>Email: </td>
-                  <td><input type="text" class="form_text" id="form_email"></td>
+                  <td><input type="text" class="form_text" id="form_email" placeholder="abc@abc.com" required ></td>
                   <td><span class="error_form" id="email_error_message"></span></td>
                </tr>
                <tr>
                   <td></td>
-                  <td><input type="submit" class="sbmt_btn" value="Create Account"></td>
+                  <td> <input id = "button" type="submit" onsubmit="myfunction()" value="Create Account"  > </td>
                   <td></td>
                </tr>
             </table>
