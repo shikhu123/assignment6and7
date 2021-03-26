@@ -5,10 +5,10 @@
 	$("#retype_password_error_message").hid();
 	$("#email_error_message").hid();
 
-	va error_username = fals;
-	va error_password = fals;
-	va error_retype_password = fals;
-	va error_email = fals;
+	var error_username = false;
+	var error_password = false;
+	var error_retype_password = false;
+	var error_email = false;
 	
 	//Excecute when the use click out of the box "focusout"
 	$("#form_username").focusout(function() {
@@ -37,7 +37,7 @@
 
 	function check_username() {
 	
-		va username_length = $("#form_username").val().length;
+		var username_length = $("#form_username").val().length;
 		
 		if(username_length < 5 || username_length > 20) {
 			$("#username_error_message").html("Your username must be between 5-20 characters");
@@ -51,7 +51,7 @@
 
 	function check_password() {
 	
-		va password_length = $("#form_password").val().length;
+		var password_length = $("#form_password").val().length;
 		
 		if(password_length < 8) {
 			$("#password_error_message").html("Your password must be at least 8 characters");
@@ -65,8 +65,8 @@
 
 	function check_retype_password() {
 	
-		va password = $("#form_password").val();
-		va retype_password = $("#form_retype_password").val();
+		var password = $("#form_password").val();
+		var retype_password = $("#form_retype_password").val();
 		
 		if(password !=  retype_password) {
 			$("#retype_password_error_message").html("Your passwords does not match");
@@ -80,7 +80,7 @@
 
 	function check_email() {
 
-		va pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+		var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
 	
 		if(pattern.test($("#form_email").val())) {
 			$("#email_error_message").hid();
