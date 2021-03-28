@@ -1,7 +1,7 @@
 body {
 	background: #d37f7f;
 }
-logo {
+.logo {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 50px;
@@ -10,7 +10,7 @@ logo {
 	height: 400px;
 	background: url("../images/logo.png");
 }
-workarea {
+.workarea {
 	margin-left: auto;
 	margin-right: auto;
 	width: 713px;
@@ -19,13 +19,13 @@ workarea {
 	padding-top: 20px;
 	background: url("../images/work_area_bg.png");
 }
-myinput {
+.myinput {
 	height: 30px;
 	font-size: 20px;
 	padding: 5px;
 	outline: 0;
 }
-actionBtn {
+.actionBtn {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -53,14 +53,14 @@ actionBtn {
 	text-shadow:0px 1px 0px #ffffff;
 	outline: 0;
 }
-mytext {
+.mytext {
 	font-size: 100px;
 	text-align: center;
 	width: 690px;
 	color: #40516A;
 	margin-top: 100px;
 }
-mydiv1 {
+.mydiv1 {
 	float: left;
 	background: #A1A8A2;
 	width: 100px;
@@ -72,7 +72,7 @@ mydiv1 {
 	font-size: 20px;
 	font-weight: bold;
 }
-mydiv2 {
+.mydiv2 {
 	float: left;
 	background: #A1A8A2;
 	width: 100px;
@@ -85,7 +85,7 @@ mydiv2 {
 	font-size: 20px;
 	font-weight: bold;
 }
-workarea h1 {
+.workarea h1 {
 	margin: 0px;
 	font-size: 30px;
 	margin-bottom: 20px;
@@ -93,19 +93,19 @@ workarea h1 {
 	letter-spacing: 1px;
 	color: #557197;
 }
-workarea table tr td {
+.workarea table tr td {
 	font-family: "Franklin Gothic Medium","Franklin Gothic","ITC Franklin Gothic",Arial,sans-serif;
 	font-size: 20px;
 	color: #4A5D77;
 }
-form_text {
+.form_text {
 	height: 20px;
 	font-size: 20px;
 	color: #4A5D77;
 	padding: 5px;
 	outline: 0;
 }
-sbmt_btn {
+.sbmt_btn {
 	margin-top: 10px;
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -133,7 +133,7 @@ sbmt_btn {
 	text-shadow:0px 1px 0px #ffffff;
 	outline: 0px;
 }
-error_form {
+.error_form {
 	font-size: 15px;
 	font-family: Arial;
 	color: #FF0052;
