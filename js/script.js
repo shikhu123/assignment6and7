@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 	$("#form_number").focusout(function() {
 
-		check_contact();
+		check_number();
 		
 	});
 
@@ -60,11 +60,11 @@ $(document).ready(function() {
 	
 	}
 
-	function check_contact() {
-	
+	function check_number() {
+		console.log("inside number");
 		var contact_length = $("#form_number").val().length;
 		
-		if(contact_length > 11) {
+		if(contact_length < 10 || contact_length > 10) {
 			$("#number_error_message").html("Your number must be 10 digits");
 			$("#number_error_message").show();
 			error_number = true;
@@ -130,7 +130,7 @@ $(document).ready(function() {
 		check_password();
 		check_retype_password();
 		check_email();
-		check_contact();
+		check_number();
 		
 		if(error_username == false && error_password == false && error_retype_password == false && error_email == false && error_number == false) {
 			return true;
