@@ -1,9 +1,10 @@
 <html>
 <head>
       <link rel="stylesheet" type="text/css" href="css/style.css" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
       <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
       <script type="text/javascript" language="javascript" src="js/script.js"></script>
+      <!-- <script type="text/javascript" language="javascript" src="js/script1.js"></script> -->
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <link rel="icon" type="image/png" href="images/favicon.ico">
       <title>Form Validation in jQuery</title>
@@ -13,7 +14,7 @@
       <!-- end of logo -->
       <div class="workarea">
          <h1>Create an Account</h1>
-         <form id=registration_form action="register.html" method="post">
+         <form id=registration_form method="post" action="register.html">
             <table>
                <tr>
                   <td>Chose Username: </td>
@@ -32,7 +33,7 @@
                </tr>
                <tr>
                 <td>Contact: </td>
-                <td><input type="tel" class="form_number" id="form_number" placeholder = "123-667-8890"  ></td>
+                <td><input type="tel" class="form_text" id="form_number" placeholder = "123-667-8890"  ></td>
                 <td><span class="error_form" id="number_error_message"></span></td>
              </tr>
                <tr>
@@ -42,7 +43,7 @@
                </tr>
                <tr>
                   <td></td>
-                  <td> <input type="submit" class="sbmt_btn" value="Create Account"> </td>
+                  <td> <input type="submit" class="sbmt_btn" value="Create Account"></td>
                   <td></td>
                </tr>
             </table>
@@ -51,6 +52,4 @@
       <!-- end of workarea -->
 </body>
 
-      <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
-      <script type="text/javascript" language="javascript" src="js/script.js"></script>
 </html>

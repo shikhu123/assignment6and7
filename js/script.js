@@ -1,25 +1,28 @@
-(document).ready(function() {
-
+$(document).ready(function() {
+	$('#registration_form').on('click', function(e){
+		console.log("readyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy!!");
 	
 	//hid all errors, which will only show when called below
-	$("#username_error_message").hid();
-	$("#password_error_message").hid();
-	$("#retype_password_error_message").hid();
-	$("#email_error_message").hid();
+	$("#username_error_message").hide();
+	$("#number_error_message").hide();
+	$("#password_error_message").hide();
+	$("#retype_password_error_message").hide();
+	$("#email_error_message").hide();
 
 	var error_username = false;
 	var error_password = false;
+	var error_number = false;
 	var error_retype_password = false;
 	var error_email = false;
 	
-	//Excecute when the use click out of the box "focusout"
+	//Excecute when the user click out of the box "focusout"
 	$("#form_username").focusout(function() {
 
 		check_username();
 		
 	});
 
-	("#form_password").focusout(function() {
+	$("#form_password").focusout(function() {
 
 		check_password();
 		
@@ -37,16 +40,36 @@
 		
 	});
 
+	$("#form_number").focusout(function() {
+
+		check_contact();
+		
+	});
+
 	function check_username() {
 	
 		var username_length = $("#form_username").val().length;
 		
 		if(username_length < 5 || username_length > 20) {
 			$("#username_error_message").html("Your username must be between 5-20 characters");
-			("#username_error_message").show();
+			$("#username_error_message").show();
 			error_username = true;
 		} else {
-			$("#username_error_message").hid();
+			$("#username_error_message").hide();
+		}
+	
+	}
+
+	function check_contact() {
+	
+		var contact_length = $("#form_number").val().length;
+		
+		if(contact_length > 11) {
+			$("#number_error_message").html("Your number must be 10 digits");
+			$("#number_error_message").show();
+			error_number = true;
+		} else {
+			$("#number_error_message").hide();
 		}
 	
 	}
@@ -60,7 +83,7 @@
 			$("#password_error_message").show();
 			error_password = true;
 		} else {
-			$("#password_error_message").hid();
+			$("#password_error_message").hide();
 		}
 	
 	}
@@ -75,7 +98,7 @@
 			$("#retype_password_error_message").show();
 			error_retype_password = true;
 		} else {
-			$("#retype_password_error_message").hid();
+			$("#retype_password_error_message").hide();
 		}
 	
 	}
@@ -85,9 +108,9 @@
 		var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
 	
 		if(pattern.test($("#form_email").val())) {
-			$("#email_error_message").hid();
+			$("#email_error_message").hide();
 		} else {
-			("#email_error_message").html("Invalid email address");
+			$("#email_error_message").html("Invalid email address");
 			$("#email_error_message").show();
 			error_email = true;
 		}
@@ -101,18 +124,22 @@
 		error_password = false;
 		error_retype_password = false;
 		error_email = false;
+		error_number = false;
 											
 		check_username();
 		check_password();
 		check_retype_password();
 		check_email();
+		check_contact();
 		
-		if(error_username == false && error_password == false && error_retype_password == false && error_email == false) {
+		if(error_username == false && error_password == false && error_retype_password == false && error_email == false && error_number == false) {
 			return true;
 		} else {
 			return false;	
 		}
 
-	};
+	});
 
+});
+	
 });
