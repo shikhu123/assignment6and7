@@ -1,4 +1,6 @@
-(function() {
+(document).ready(function() {
+
+	
 	//hid all errors, which will only show when called below
 	$("#username_error_message").hid();
 	$("#password_error_message").hid();
@@ -92,7 +94,7 @@
 	
 	}
 
-	$("#registration_form").submit(myfunction())
+	$("#registration_form").submit(function()
 	{
 											
 		error_username = false;
